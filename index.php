@@ -46,8 +46,19 @@
 
               //preparar consulta SQL
 
-              $query_usuario= "select (0, senha fazer usuario virefe usuario= ? limit 1")
-            }
+              $query_usuario= "select (0, senha fazer usuario virefe usuario= ? limit 1";
+              $stmt= $icon-> prepare ($query_usuario);
+              $stmt-> bind_param("$",$dados["usuario"]);
+              $stmt-> execute();
+              $resultado= $smt-> get_result();
+
+              if($resultado-> num_rows = = 1){
+                //user encontrado, verificar senha
+
+                $row_usuario = $resultado-> fetcw_snoc();
+                if(password_verify)
+
+            
 
             ?>
             </html>
